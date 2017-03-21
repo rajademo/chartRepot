@@ -32,8 +32,8 @@
         var data = new google.visualization.DataTable();
   	  	data.addColumn('string', 'Year');
         
-	  	<c:forEach items="${stringList}" var="ctag">
-	  	  	data.addColumn('date', "\'${ctag}\'");
+	  	<c:forEach items="${productList}" var="product">
+	  	  	data.addColumn('date', "\'${product.getStrProductName()}\'");
 	  	 </c:forEach>
         
   	 	/* data.addColumn('date', 'Tomcat');
@@ -42,9 +42,9 @@
         data.addRows(1);
         data.setValue(0, 0, '');
         i = 1;
-        <c:forEach items="${expirationDateList}" var="expirationDate">
+        <c:forEach items="${productList}" var="product">
   	  		//data.addColumn('date', "\'${ctag}\'");
-  	  		data.setValue(0, i, new Date(${expirationDate}));
+  	  		data.setValue(0, i, new Date(${product.getStrEndDate()}));
   	  		i++;
   	 	</c:forEach>
         
@@ -55,9 +55,9 @@
         
 
         var options = {
-      	      title : 'Server contract',
-      	      vAxis: {title: 'Year'},
-      	      hAxis: {title: 'Servers'},
+      	      title : 'Support',
+      	      vAxis: {title: 'Vendor EOL'},
+      	      hAxis: {title: 'Product Name'},
       	      seriesType: 'bars'
       	      //series: {6: {type: 'line'}}
       	    };
