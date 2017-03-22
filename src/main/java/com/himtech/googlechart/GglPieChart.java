@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.raja.appcontroller;
+package com.himtech.googlechart;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,7 +26,10 @@ import com.googlecode.charts4j.Color;
 import com.googlecode.charts4j.GCharts;
 import com.googlecode.charts4j.PieChart;
 import com.googlecode.charts4j.Slice;
-
+/**
+ * @author himanshu
+ * 
+ */
 @Controller
 @RequestMapping("/gcharts")
 public class GglPieChart
@@ -52,75 +55,50 @@ public class GglPieChart
 		
 		List<Product> productList = new ArrayList<Product>();
 		productList.add(createProduct("IBM MQ 6.0","2000, 8, 5","2011, 8, 5"));
-		productList.add(createProduct("Apache 2.2","2000, 8, 5","2013, 3, 5"));
-		productList.add(createProduct("Apache 2.4","2000, 8, 5","2013, 8, 5"));
-		productList.add(createProduct("Tibco AMX 2.2.1","2000, 8, 5","2016, 2, 15"));
-		productList.add(createProduct("Tibco AMX 3.2","2000, 8, 5","2010, 8, 5"));
-		productList.add(createProduct("Tibco EMS 5.1.5","2000, 8, 5","2015, 0, 5"));
-		productList.add(createProduct("Tibco EMS 6.1","2000, 8, 5","2016, 11, 30"));
-		productList.add(createProduct("Tibco EMS 8.1","2000, 8, 5","2010, 8, 5"));
-		productList.add(createProduct("Jboss 5","2000, 8, 5","2016, 10, 5"));
+		productList.add(createProduct("Apache 2.2","2005, 8, 5","2013, 3, 5"));
+		productList.add(createProduct("Apache 2.4","2003, 8, 5","2013, 8, 5"));
+		productList.add(createProduct("Tibco AMX 2.2.1","2010, 8, 5","2016, 2, 15"));
+		productList.add(createProduct("Tibco AMX 3.2","2005, 8, 5","2010, 8, 5"));
+		productList.add(createProduct("Tibco EMS 5.1.5","2011, 8, 5","2015, 0, 5"));
+		productList.add(createProduct("Tibco EMS 6.1","2013, 8, 5","2016, 11, 30"));
+		productList.add(createProduct("Tibco EMS 8.1","2002, 8, 5","2010, 8, 5"));
+		productList.add(createProduct("Jboss 5","2011, 8, 5","2016, 10, 5"));
 		productList.add(createProduct("Jboss 4","2000, 8, 5","2013, 0, 30"));
 		productList.add(createProduct("IBM Websphere 7","2000, 8, 5","2015, 8, 5"));
-		productList.add(createProduct("IBM Websphere 8","2000, 8, 5","2017, 8, 5"));
-		productList.add(createProduct("IBM HttpServer 8","2000, 8, 5","2014, 8, 5"));
-		productList.add(createProduct("IBM HttpServer 7","2000, 8, 5","2012, 8, 5"));
-		productList.add(createProduct("vFabric tcServer 2.9","2000, 8, 5","2017, 0, 30"));
-		productList.add(createProduct("vFabric tcServer 2.7","2000, 8, 5","2015, 8, 30"));
-		productList.add(createProduct("vFabric tcServer 2.5","2000, 8, 5","2015, 2, 30"));
+		productList.add(createProduct("IBM Websphere 8","2014, 8, 5","2017, 8, 5"));
+		productList.add(createProduct("IBM HttpServer 8","2011, 8, 5","2014, 8, 5"));
+		productList.add(createProduct("IBM HttpServer 7","2008, 8, 5","2012, 8, 5"));
+		productList.add(createProduct("vFabric tcServer 2.9","2010, 8, 5","2017, 0, 30"));
+		productList.add(createProduct("vFabric tcServer 2.7","2012, 8, 5","2015, 8, 30"));
+		productList.add(createProduct("vFabric tcServer 2.5","2011, 8, 5","2015, 2, 30"));
 
 		
-		
-		List<String> lstString = new ArrayList<String>();
-		lstString.add("IBM MQ 6.0");
-		lstString.add("Apache 2.2");
-		lstString.add("Apache 2.4");
-		lstString.add("Tibco AMX 2.2.1");
-		lstString.add("Tibco AMX 3.2");
-		lstString.add("Tibco EMS 5.1.5");
-		lstString.add("Tibco EMS 6.1");
-		lstString.add("Tibco EMS 8.1");
-		lstString.add("Jboss 5");
-		lstString.add("Jboss 4");
-		lstString.add("IBM Websphere 7");
-		lstString.add("IBM Websphere 8");
-		lstString.add("IBM HttpServer 8");
-		lstString.add("IBM HttpServer 7");
-		lstString.add("vFabric tcServer 2.9");
-		lstString.add("vFabric tcServer 2.7");
-		lstString.add("vFabric tcServer 2.5");
-		
-		System.out.println("lstString:: "+lstString.size());
-		
-		List<String> expirationDateList = new ArrayList<String>();
-		expirationDateList.add("2000, 8, 5");
-		expirationDateList.add("2010, 8, 5");
-		expirationDateList.add("2003, 8, 5");
-		expirationDateList.add("2001, 8, 5");
-		expirationDateList.add("2007, 9, 5");
-		expirationDateList.add("2010, 8, 5");
-		expirationDateList.add("2000, 3, 5");
-		expirationDateList.add("2010, 7, 5");
-		expirationDateList.add("2000, 2, 5");
-		expirationDateList.add("2010, 6, 5");
-		expirationDateList.add("2000, 8, 5");
-		expirationDateList.add("2010, 8, 5");
-		expirationDateList.add("2000, 8, 5");
-		expirationDateList.add("2010, 8, 5");
-		expirationDateList.add("2003, 8, 5");
-		expirationDateList.add("2010, 8, 5");
-		expirationDateList.add("2020, 8, 5");
-		
-		System.out.println("expirationDateList:: "+expirationDateList.size());
-		
-		model.addAttribute("stringList", lstString);
-		model.addAttribute("expirationDateList", expirationDateList);
+		List<ProductUsage> usageList = new ArrayList<ProductUsage>();
+		usageList.add(getProductUsage("IBM MQ 6.0",15000,10000));
+		usageList.add(getProductUsage("Apache 2.2",5000,3459));
+		usageList.add(getProductUsage("Apache 2.4",7000,3456));
+		usageList.add(getProductUsage("Tibco AMX 2.2.1",2000,300));
+		usageList.add(getProductUsage("Tibco AMX 3.2",3000,698));
+		usageList.add(getProductUsage("Tibco EMS 5.1.5",4000,1234));
+		usageList.add(getProductUsage("Tibco EMS 6.1",4954,3434));
+		usageList.add(getProductUsage("Tibco EMS 8.1",3433,1212));
+		usageList.add(getProductUsage("Jboss 5",9888,3434));
+		usageList.add(getProductUsage("Jboss 4",7667,3434));
+		usageList.add(getProductUsage("IBM Websphere 7",4000,2033));
+		usageList.add(getProductUsage("IBM Websphere 8",6000,3030));
+		usageList.add(getProductUsage("IBM HttpServer 8",7000,4985));
+		usageList.add(getProductUsage("IBM HttpServer 7",4534,787));
+		usageList.add(getProductUsage("vFabric tcServer 2.9",3434,3233));
+		usageList.add(getProductUsage("vFabric tcServer 2.7",6767,2323));
+		usageList.add(getProductUsage("vFabric tcServer 2.5",2788,325));
+
 		model.addAttribute("productList", productList);
+		model.addAttribute("usageList", usageList);
 
 		return "display";
 	}
 	
-	
+	//Product
 	public Product createProduct(String productName, String startDate, String endDate) {
 		Product product = new Product();
 		product.setStrProductName(productName);
@@ -129,6 +107,14 @@ public class GglPieChart
 		return product;
 	}
 	
+	//Product Usage
+	public ProductUsage getProductUsage(String productName, int availableLicense, int usedLicense) {
+		ProductUsage productUsage = new ProductUsage();
+		productUsage.setStrProductName(productName);
+		productUsage.setAvailableLicense(availableLicense);
+		productUsage.setUsedLicense(usedLicense);
+		return productUsage;
+	}
 	
 	
 	@RequestMapping(value = "/piechartJfree", method = RequestMethod.GET)
@@ -143,7 +129,6 @@ public class GglPieChart
 		try {
 			ChartUtilities.writeChartAsPNG(response.getOutputStream(), pieChart, 750, 400);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
