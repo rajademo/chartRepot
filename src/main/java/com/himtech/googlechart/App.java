@@ -80,4 +80,23 @@ public class App {
     <artifactId>gson</artifactId>
     <version>2.8.0</version>
 </dependency>
+
+
+
+Map<String, String> appKeys = new HashMap<String, String>();
+		
+		appKeys.put(".NET", ".NET App");
+		appKeys.put(".NET2", ".NET App");
+		appKeys.put(".NET3", ".NET App");
+		appKeys.put("WEB", "WEB1");
+		
+		System.out.println(appKeys);
+		
+		String key = ".NET App";
+		
+		for(Map.Entry<String, String> entry : appKeys.entrySet()) {
+			if(key.equals(entry.getValue())) {
+				System.out.println(entry.getKey());
+			}
+		}
 */
