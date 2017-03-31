@@ -4,13 +4,14 @@
         <script type="text/javascript">
             google.load('visualization', '1.1', {packages: ['controls']});
             google.load('visualization', '1', {packages:['table']});
-	  
+			google.setOnLoadCallback(drawVisualization);
+			//google.setOnLoadCallback(drawVisualization1);
 		function drawVisualization() {
         // Prepare the data
-       var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=0AozvCNI02VmpdFBsVkxOQ3NENVZ1djhxVmZUNUdtY0E&single=true&gid=0&pub=1');
-                query.send(handleQueryResponse);
-            }
-            function handleQueryResponse(response) {
+       //var query = new google.visualization.Query('http://spreadsheets.google.com/tq?key=0AozvCNI02VmpdFBsVkxOQ3NENVZ1djhxVmZUNUdtY0E&single=true&gid=0&pub=1');
+               // query.send(handleQueryResponse);
+           // }
+         //   function handleQueryResponse(response) {
 			
 			var data = new google.visualization.DataTable({
 				  cols: [
@@ -85,8 +86,7 @@
 
             }
       
-            google.setOnLoadCallback(drawVisualization);
-			google.setOnLoadCallback(drawVisualization1);
+            
         </script>
 
     </head>
